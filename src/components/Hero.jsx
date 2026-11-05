@@ -2,8 +2,10 @@ import { motion } from 'framer-motion'
 
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const Hero = () => {
+  const { t } = useLanguage()
   return (
     <section className='relative w-full h-screen mx-auto'>
       <div
@@ -16,11 +18,11 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Estiven</span>
+            {t('heroGreeting')} <span className='text-[#915EFF]'>Estiven</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a fullstack developer passionate about <br className='sm:block hidden' />
-            programming and web development
+            {t('heroSubtitle')} <br className='sm:block hidden' />
+            {t('heroSubtitle2')}
           </p>
         </div>
       </div>

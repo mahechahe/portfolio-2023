@@ -6,6 +6,7 @@ import { styles } from '../styles'
 import { services } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -36,23 +37,24 @@ const ServiceCard = ({ index, title, icon }) => (
 )
 
 const About = () => {
+  const { t, tr } = useLanguage()
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>{t('aboutSub')}</p>
+        <h2 className={styles.sectionHeadText}>{t('aboutHead')}</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        Skilled and results-oriented software engineer with close to 2 years of experience working in environments with a wide range of programs and technologies. Problem solver and strong communicator eager to prove my worth and talent in a start-up. Motivated to advance and expand my skill set through targeted mentoring and challenging projects
+        {t('aboutText')}
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <ServiceCard key={service.icon} index={index} icon={service.icon} title={tr(service.title)} />
         ))}
       </div>
     </>

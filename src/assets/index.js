@@ -46,7 +46,47 @@ import booking from './projects/booking.jpeg'
 import youtube from './projects/youtube.jpg'
 import cryptoverse from './projects/crypto.jpg'
 
+import nestjs from './tech/nestjs.png'
+import postgresql from './tech/postgresql.png'
+import aws from './tech/aws.png'
+
+import jaimeTorresLogo from './company/jaimetorres.png'
+import branaLogo from './company/brana.png'
+import dankeLogo from './company/danke.png'
+import nuvanaLogo from './company/nuvana.png'
+import credisosLogo from './company/credisos.png'
+
+import nuvanaProject from './projects/nuvana.jpg'
+import sanjoanenseProject from './projects/sanjoanense.jpg'
+import cortolimaProject from './projects/cortolima.jpg'
+import defensaProject from './projects/defensa-judicial.jpg'
+import credisosProject from './projects/credisos.jpg'
+import luupProject from './projects/luup.jpg'
+
+import luisGranada from './testimonials/luis-granada.jpg'
+import cristianFlorez from './testimonials/cristian-florez.jpg'
+import juanMoreno from './testimonials/juan-moreno.jpg'
+import juanJoseRosero from './testimonials/juan-jose-rosero.jpg'
+
 export {
+  nestjs,
+  postgresql,
+  aws,
+  jaimeTorresLogo,
+  branaLogo,
+  dankeLogo,
+  nuvanaLogo,
+  credisosLogo,
+  nuvanaProject,
+  sanjoanenseProject,
+  cortolimaProject,
+  defensaProject,
+  credisosProject,
+  luupProject,
+  luisGranada,
+  cristianFlorez,
+  juanMoreno,
+  juanJoseRosero,
   logo,
   backend,
   creator,
